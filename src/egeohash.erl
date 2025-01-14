@@ -24,7 +24,7 @@ init() ->
     end,
     erlang:load_nif(SoName, 0).
 
--spec encode(Lat::integer()|float(), Lon::integer()|float(), Prec::integer()) -> {ok, string()}.
+-spec encode(Lat::float()|integer(), Lon::float()|integer(), Prec::integer()) -> {ok, string()}.
 encode(_Lat, _Lon, _Prec) ->
     erlang:nif_error("NIF library not loaded").
 
